@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Donation Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Blood Donation & Finder Service</h1>
+    <nav>
+      <button onclick="showSection('register')">Register as Donor</button>
+      <button onclick="showSection('search')">Find Blood</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="register" class="active">
+      <h2>Donor Registration</h2>
+      <form id="donorForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="text" placeholder="Blood Group (e.g., A+)" required />
+        <input type="text" placeholder="City" required />
+        <input type="tel" placeholder="Contact Number" required />
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <section id="search">
+      <h2>Find a Donor</h2>
+      <input type="text" id="searchGroup" placeholder="Enter Blood Group (e.g., B+)" />
+      <input type="text" id="searchCity" placeholder="Enter City" />
+      <button onclick="searchDonors()">Search</button>
+      <ul id="results"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blood Donation Service</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
